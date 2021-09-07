@@ -47,7 +47,7 @@ The two sum function takes in an array or list of numbers and a target value and
 
 ### What I learned
 
-Understanding the "two sum" function was a challenge, initially. I gained a better understanding of objects and arrays. Implementing a dashboard that would give the user input was challenging. 
+Understanding the "two sum" function was a challenge, initially. I gained a better understanding of objects and arrays. Implementing a dashboard that would give the user feedback was challenging. 
 
 
 ## Author

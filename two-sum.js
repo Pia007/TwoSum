@@ -46,9 +46,7 @@ console.log(twoSum([3,2,4] ,6));
 console.log(twoSum([3,3,5], 6));
 console.log(twoSum([1,2,3], 6));
 console.log(twoSum([1,2,3,4,5], 8));
-console.log(twoSum([1,2,3,4,5], 8));
 console.log(twoSum([1,3,10,11,14], 10));
 console.log(twoSum([75,45,20,100,18], 145));
 
-// Use `${variable} + ${variable}` to get printout in html
 

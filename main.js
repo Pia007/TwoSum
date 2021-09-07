@@ -44,15 +44,23 @@ buttonSum.addEventListener('click', function(e) {
 });
 buttonSum.addEventListener('click', twoSum);
 
+
 // Reset Form Button
 buttonReset.addEventListener('click', function(e) {
     e.preventDefault();
 });
 buttonReset.addEventListener('click', clearForm);
+// function isFalse() {
+//     if(twoSum = false){
+//         outcome.style.display = "block";
+//         outcome.style.color = "#FF1919";
+//         outcome.innerHTML = "The sum of " + `${target}` + " is not in [" +`${arr}`+ "]"
+//     } 
+// }  
 
 // Two Sum function        
 function twoSum(arr, target) {
-
+    var twoSum = true
     // get value of target 
     target = document.getElementById("targetNumber").value;
 
@@ -74,22 +82,24 @@ function twoSum(arr, target) {
         if (numsObj[someNum] !== undefined ) {
             let indexOne = numsObj[someNum];
             let indexTwo = i;
-
+            twoSum = true;
             outcome.style.display = "block";
             outcome.style.color = "#00FF2A";
             outcome.innerHTML = `${target}` + " is the sum of the values at indexes ["+`${indexOne}`+", " +`${indexTwo}`+"]."
-
-        }else if(numsObj[numDifference] = i){ 
-            
+            break;
+        }else { 
+            numsObj[numDifference] = i
+ 
+        }
+        if (numsObj[numDifference] = i) {
             outcome.style.display = "block";
             outcome.style.color = "#FF1919";
             outcome.innerHTML = "The sum of " + `${target}` + " is not in [" +`${arr}`+ "]"
-            
         }
-        
-    }   
-} 
-    
+    }
+}   
+
+
 
 
 
