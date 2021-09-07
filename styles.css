@@ -16,7 +16,7 @@ body {
 
 .ts-container {
     width: 850px;
-    height: 500px;
+    height: 600px;
     margin: 200px auto;
     display: flex;
     flex-direction: column;
@@ -50,6 +50,7 @@ body {
     border-bottom: 5px ridge #b399ff;
     border-radius: 5px;
     text-align: center;
+    margin-bottom: 0;
 
 }
 .ts-btn-check {
@@ -63,6 +64,7 @@ body {
     border: 5px ridge #b399ff;
     border-radius: 8px;
     padding-top: 4px;
+    margin-bottom: 10px;
 }
 .ts-btn-reset {
     width: 150px;

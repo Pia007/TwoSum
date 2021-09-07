@@ -17,84 +17,79 @@
 
         // Input: nums = [3,3], target = 6
         // Output: [0,1]
-const tsForm = document.getElementById("ts-form");
-const buttonSum = document.getElementById("check-sum");
-const outcome = document.getElementById("sumResponse");
-const falseOutcome = document.getElementById("otherResponse");
 
+// DOM Elements
+const tsForm = document.getElementById("ts-form");
+const outcome = document.getElementById("sumResponse");
+const buttonSum = document.getElementById("check-sum");
+const buttonReset = document.getElementById("reset-form");
+
+
+// Hides outcome when form is cleared
 function hideOutcome() {
     outcome.style.display ="none";
 }
 
-// CLEARS the form 2.5sec after submission
+// CLEAR Form
 function clearForm() {
-    setTimeout(function() {
-        tsForm.reset();
-        hideOutcome();
-        
-    }, 3000);
+
+    tsForm.reset();
+    hideOutcome();
 };
 
-// PREVENT THE DEFAULT BEHAVIOR OF THE BUTTON AND CALL CRITERIA EVALUATION FUNCTION
+// PREVENT THE DEFAULT BEHAVIOR OF THE BUTTON 
+// Check Two Sum Button
 buttonSum.addEventListener('click', function(e) {
     e.preventDefault();
 });
 buttonSum.addEventListener('click', twoSum);
 
+// Reset Form Button
+buttonReset.addEventListener('click', function(e) {
+    e.preventDefault();
+});
+buttonReset.addEventListener('click', clearForm);
 
-        
+// Two Sum function        
 function twoSum(arr, target) {
+
+    // get value of target 
     target = document.getElementById("targetNumber").value;
+
+    // get DOM input and separates at each space between numbers
     arr = document.getElementById("randomNumbers").value.split(" ");
+
+    // makes sure array is numbers
     arr = arr.map(Number)
+
+    //sort the array lowest to highest
     arr.sort(function(a,b){return a-b});
     
     let numsObj = {};
     for (let i = 0; i < arr.length; i++) {
         let someNum = arr[i];
-        let numDifference = target - arr[someNum];
+        let numDifference = target - someNum;
         
     
         if (numsObj[someNum] !== undefined ) {
-            
-            let indexOne = numsObj[someNum]
-            let indexTwo = arr.indexOf(arr[numDifference])
+            let indexOne = numsObj[someNum];
+            let indexTwo = i;
 
             outcome.style.display = "block";
             outcome.style.color = "#00FF2A";
             outcome.innerHTML = `${target}` + " is the sum of the values at indexes ["+`${indexOne}`+", " +`${indexTwo}`+"]."
 
-        }else if(numsObj[someNum] == undefined) { 
-            numsObj[numDifference] = i;
+        }else if(numsObj[numDifference] = i){ 
+            
             outcome.style.display = "block";
             outcome.style.color = "#FF1919";
-            outcome.innerHTML = `${target}` + " not found!"
+            outcome.innerHTML = "The sum of " + `${target}` + " is not in [" +`${arr}`+ "]"
             
         }
         
-        
-    }
-    
-      
+    }   
 } 
     
-    // arr = arr.join(", ")
-    // 
-    // outcome.innerHTML = `${target}` + " is not the sum of any two numbers in [" + `${arr}`+"]."
-    
-    
-
-
-// console.log(twoSum([2,7,11,15], 9));
-// console.log(twoSum([3,2,4] ,6));
-// console.log(twoSum([3,3,5], 6));
-// console.log(twoSum([1,2,3], 6));
-// console.log(twoSum([1,2,3,4,5], 8));
-// console.log(twoSum([1,2,3,4,5], 10));
-// console.log(twoSum([1,2,3,4,5], 8));
-// console.log(twoSum([75,45,20,100,18], 145));
-
-// Use `${variable} + ${variable}` to get printout in html
 
 
 

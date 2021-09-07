@@ -1,4 +1,4 @@
-Isogram Checker
+Two Sum Function
 
 ## Table of contents
 
@@ -20,8 +20,7 @@ Isogram Checker
 
 Two Sum Function
 
-<!-- An isogram is a word that has no repeating letters, consecutive or non-consecutive. This application accepts a user's input and evaluates whether or not it is an isogram. Additionally, if the input does not fit the criteria for evaluation, the user is prompted to try again. Note: The input automatically clears after 2.5 seconds.  -->
-
+The two sum function takes in an array or list of numbers and a target value and returns the indexes of two numbers if their sum is equal to the target number. 
 
 
 
@@ -36,19 +35,19 @@ Two Sum Function
 
 - Semantic HTML5 Markup
 - JavaScript
-  - String Methods
   - Array Methods
   - Document Object Model
-  - Regular Expressions
+  - Objects
   - For Loops
-  - Conditional Operators
   - Template Literals
 - CSS3
+- Wakatime
 
 
 ### What I learned
 
-As simple as this app may seem, it was challenging to implement a function that evaluates the input based on certain conditions prior to actually evaluating whether the input is an isogram or not.  I learned to how to create functions that used a combination of string & array methods, regular expressions, loops, conditional operators, template literals and DOM maipulation.
+Understanding the "two sum" function was a challenge, initially. I gained a better understanding of objects and arrays. Implementing a dashboard that would give the user input was challenging. 
+
 
 ## Author
 
