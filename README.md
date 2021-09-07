@@ -42,7 +42,7 @@ The two sum function takes in an array or list of numbers and a target value and
   - For Loops
   - Template Literals
 - CSS3
-- Wakatime
+- Wakatime Analytics
 
 
 ### What I learned
