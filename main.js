@@ -70,8 +70,6 @@ function twoSum(arr, target) {
     // makes sure array is numbers
     arr = arr.map(Number)
 
-    //sort the array lowest to highest
-    arr.sort(function(a,b){return a-b});
     
     let numsObj = {};
     for (let i = 0; i < arr.length; i++) {
@@ -89,13 +87,16 @@ function twoSum(arr, target) {
             break;
         }else { 
             numsObj[numDifference] = i
- 
-        }
-        if (numsObj[numDifference] = i) {
             outcome.style.display = "block";
             outcome.style.color = "#FF1919";
             outcome.innerHTML = "The sum of " + `${target}` + " is not in [" +`${arr}`+ "]"
+            
         }
+        // if (numsObj[numDifference] = i) {
+        //     outcome.style.display = "block";
+        //     outcome.style.color = "#FF1919";
+        //     outcome.innerHTML = "The sum of " + `${target}` + " is not in [" +`${arr}`+ "]"
+        // }
     }
 }   
 
