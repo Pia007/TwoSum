@@ -22,6 +22,7 @@ Two Sum Function
 
 The two sum function takes in an array or list of numbers and a target value and returns the indexes of two numbers if their sum is equal to the target number. 
 
+![image](https://user-images.githubusercontent.com/66088725/132406853-0c13d47c-a99b-4ca8-afa9-229facfccd61.png)
 
 
 ### Links
