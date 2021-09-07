@@ -20,9 +20,10 @@
 const tsForm = document.getElementById("ts-form");
 const buttonSum = document.getElementById("check-sum");
 const outcome = document.getElementById("sumResponse");
+const falseOutcome = document.getElementById("otherResponse");
 
 function hideOutcome() {
-    outcome.style.display ="none"
+    outcome.style.display ="none";
 }
 
 // CLEARS the form 2.5sec after submission
@@ -31,7 +32,7 @@ function clearForm() {
         tsForm.reset();
         hideOutcome();
         
-    }, 3500);
+    }, 3000);
 };
 
 // PREVENT THE DEFAULT BEHAVIOR OF THE BUTTON AND CALL CRITERIA EVALUATION FUNCTION
@@ -46,112 +47,43 @@ function twoSum(arr, target) {
     target = document.getElementById("targetNumber").value;
     arr = document.getElementById("randomNumbers").value.split(" ");
     arr = arr.map(Number)
+    arr.sort(function(a,b){return a-b});
     
-    
-    
+    let numsObj = {};
     for (let i = 0; i < arr.length; i++) {
-        let numsArr = [];
-        
         let someNum = arr[i];
-        let numDifference = target - someNum;
-        // let numOne = numsObj[someNum]
-        // let numTwo = numsObj[arr[numDifference]]
-
-        // if(arr.value == " " || target.value == " "){
-        //     outcome.innerHTML = "Please complete both fields"
-        // }
-        if(numsArr[arr[i]] != null){
-            // index = numsArr[arr[i]];
-            let numOne = numsObj[someNum]
-            numsObj[numDifference] = i
-            let numTwo = numsObj[numDifference]
+        let numDifference = target - arr[someNum];
+        
+    
+        if (numsObj[someNum] !== undefined ) {
             
-            // let numTwo = numsObj[arr[numDifference]]
-            // numOne = arr.indexOf(arr[i]);
-            // numTwo = arr.indexOf(arr[numDifference])
-            // outcomeArr[0] = index + 1;
-            // outcomeArr[1] = i + 1;
+            let indexOne = numsObj[someNum]
+            let indexTwo = arr.indexOf(arr[numDifference])
 
-            // numOne = outcomeArr[0] ;
-            // numTwo = outcomeArr[1] ;
-           
+            outcome.style.display = "block";
             outcome.style.color = "#00FF2A";
-            outcome.innerHTML = "The sum of the values at ["+`${numOne}`+", " +`${numTwo}`+"] is " + `${target}`+ "."
-            
-            clearForm();
-        }else {
-            // numsArr[target - arr[i]] = i;
+            outcome.innerHTML = `${target}` + " is the sum of the values at indexes ["+`${indexOne}`+", " +`${indexTwo}`+"]."
+
+        }else if(numsObj[someNum] == undefined) { 
+            numsObj[numDifference] = i;
+            outcome.style.display = "block";
             outcome.style.color = "#FF1919";
-            outcome.innerHTML = `${target}` + " is not the sum of any two numbers in [" + `${arr}`+"]."
-            arr.join(", ")
-            clearForm();
-        };
-        
-        // if(numsObj[someNum] !== undefined) {
-        //     let numOne = numsObj[someNum]
-           
-        //     let numTwo = target - someNum;
-        //     outcome.style.color = "#00FF2A";
-        //     outcome.innerHTML = "The sum of the values at ["+`${numOne}`+", " +`${numTwo}`+"] is " + `${target}`+ "."
-        //     clearForm();
-        // }else if(numsObj.indexOf(numDifference) == false){
-        //     outcome.innerHTML = `${target}` + " is not the sum of any two numbers in [" + `${arr}`+"]."    
-        // }else {
-           //outcome.innerHTML = `${target}` + " is not the sum of any two numbers in [" + `${arr}`+"]."
-            // outcome.style.color = "#FF1919";
-            // outcome.innerHTML = `${target}` + " is not the sum of any two numbers in [" + `${arr}`+"]."
-                
-                // function allClear() {
-                //     
-                //     setTimeout(function() {
-                //         tsForm.reset();
-                //         hideOutcome();
-                        
-                //     }, 3500);
-
-                // };
-                // allClear();
-            // arr = arr.join(", ")
-            // outcome.style.color = "#FF1919";
-            // return outcome.innerHTML = `${target}` + " is not the sum of any two numbers in [" + `${arr}`+"]."
-        //};
-        // if(numsObj.indexOf(numDifference) == false){
-        //     outcome.innerHTML = `${target}` + " is not the sum of any two numbers in [" + `${arr}`+"]."
-        // }else {
-        //     numsObj[numDifference] != i; 
-        // }
-        // function allClear() {
-        //     outcome.style.color = "#FF1919";
-         //   outcome.innerHTML = `${target}` + " is not the sum of any two numbers in [" + `${arr}`+"]."
-        //     setTimeout(function() {
-        //         tsForm.reset();
-        //         hideOutcome();
-                
-        //     }, 3500);
-
-        // };
-        // allClear();
-        // else {
-        //     arr = arr.join(", ")
-        //     outcome.style.color = "#FF1919";
-        //     outcome.innerHTML = `${target}` + " is not the sum of any two numbers in [" + `${arr}`+"]."
-
-        // }
-        // if (numsObj[numDifference] < i){
-        //     arr.join(", ")
-        //     outcome.style.color = "#FF1919";
-        //     outcome.innerHTML = `${target}` + " is not the sum of any two numbers in [" + `${arr}`+"]." 
-        // }
+            outcome.innerHTML = `${target}` + " not found!"
+            
+        }
         
         
-    } 
+    }
+    
+      
+} 
     
     // arr = arr.join(", ")
-    // outcome.style.color = "#FF1919";
+    // 
     // outcome.innerHTML = `${target}` + " is not the sum of any two numbers in [" + `${arr}`+"]."
     
     
-}
+
 
 // console.log(twoSum([2,7,11,15], 9));
 // console.log(twoSum([3,2,4] ,6));

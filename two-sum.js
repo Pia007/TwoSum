@@ -19,13 +19,15 @@
         // Output: [0,1]
  
 function twoSum(arr, target) {
-    let numsObj = [];
+    let numsObj = {};
+    
     for (let i = 0; i < arr.length; i++) {
         let someNum = arr[i];
         let numDifference = target - someNum;
+        
     
         if (numsObj[someNum] !== undefined) {
-            numsObj[numDifference] = i
+            // numsObj[numDifference] = i
             return [numsObj[someNum], i]
            
         }
@@ -36,23 +38,7 @@ function twoSum(arr, target) {
     return "Target not found!"
 }
 
-var twoSum = function(nums, target) {
 
-    let number = [];
-    for (let i = 0; i <nums.length; i++) {
-        let someNum = nums[i];
-        let numDifference = target - someNum;
-    
-        if (number[someNum] !== undefined) {
-            return [number[someNum], i]
-           
-        }
-        else { 
-            number[numDifference] = i
-        }
-    }   
-    return "Target not found!"
-}
 
 
 console.log(twoSum([2,7,11,15], 9));
@@ -60,7 +46,8 @@ console.log(twoSum([3,2,4] ,6));
 console.log(twoSum([3,3,5], 6));
 console.log(twoSum([1,2,3], 6));
 console.log(twoSum([1,2,3,4,5], 8));
-console.log(twoSum([1,2,3,4,5], 10));
+console.log(twoSum([1,2,3,4,5], 8));
+console.log(twoSum([1,3,10,11,14], 10));
 console.log(twoSum([75,45,20,100,18], 145));
 
 // Use `${variable} + ${variable}` to get printout in html

@@ -20,6 +20,7 @@ var twoSum = function(nums, target) {
 
         }
     }
+    return "Target not found!"
 };
 
 
