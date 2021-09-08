@@ -92,11 +92,7 @@ function twoSum(arr, target) {
             outcome.innerHTML = "The sum of " + `${target}` + " is not in [" +`${arr}`+ "]"
             
         }
-        // if (numsObj[numDifference] = i) {
-        //     outcome.style.display = "block";
-        //     outcome.style.color = "#FF1919";
-        //     outcome.innerHTML = "The sum of " + `${target}` + " is not in [" +`${arr}`+ "]"
-        // }
+        
     }
 }   
 
