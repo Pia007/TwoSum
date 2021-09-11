@@ -30,11 +30,12 @@ function hideOutcome() {
     outcome.style.display ="none";
 }
 
-// CLEAR Form
-function clearForm() {
-
-    tsForm.reset();
-    hideOutcome();
+// Reset Form
+function clearTsForm() {
+    setTimeout(function(e) {
+        tsForm.reset();
+        hideOutcome();
+    }, 3000);
 };
 
 // PREVENT THE DEFAULT BEHAVIOR OF THE BUTTON 
@@ -44,19 +45,6 @@ buttonSum.addEventListener('click', function(e) {
 });
 buttonSum.addEventListener('click', twoSum);
 
-
-// Reset Form Button
-buttonReset.addEventListener('click', function(e) {
-    e.preventDefault();
-});
-buttonReset.addEventListener('click', clearForm);
-// function isFalse() {
-//     if(twoSum = false){
-//         outcome.style.display = "block";
-//         outcome.style.color = "#FF1919";
-//         outcome.innerHTML = "The sum of " + `${target}` + " is not in [" +`${arr}`+ "]"
-//     } 
-// }  
 
 // Two Sum function        
 function twoSum(arr, target) {
@@ -70,17 +58,23 @@ function twoSum(arr, target) {
     // makes sure array is numbers
     arr = arr.map(Number)
 
-    
+    // create an object/hash map to key-value pairs
     let numsObj = {};
+
+    // use a loop to check if the two numbers are present
     for (let i = 0; i < arr.length; i++) {
+        //assign someNum to the first number found in the array
         let someNum = arr[i];
+
+        // find the second value and assign it to numDifference
         let numDifference = target - someNum;
         
-    
+        // in the object, if the value of the first number is in the object, its NOT undefined
         if (numsObj[someNum] !== undefined ) {
+            
             let indexOne = numsObj[someNum];
             let indexTwo = i;
-            twoSum = true;
+            
             outcome.style.display = "block";
             outcome.style.color = "#00FF2A";
             outcome.innerHTML = `${target}` + " is the sum of the values at indexes ["+`${indexOne}`+", " +`${indexTwo}`+"]."
@@ -92,7 +86,7 @@ function twoSum(arr, target) {
             outcome.innerHTML = "The sum of " + `${target}` + " is not in [" +`${arr}`+ "]"
             
         }
-        
+        clearTsForm()
     }
 }   
 

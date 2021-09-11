@@ -3,24 +3,22 @@ Two Sum Function
 ## Table of contents
 
 - [Overview](#overview)
-  - [The Project](#the-challenge)
+  - [The Challenge](#the-challenge)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 ## Overview
 
-### The Project
+### The Challenge
 
 [![wakatime](https://wakatime.com/badge/github/Pia007/TwoSums.svg)](https://wakatime.com/badge/github/Pia007/TwoSums)
 
 Two Sum Function
 
-The two sum function takes in an array or list of numbers and a target value and returns the indices of two numbers if their sum is equal to the target number. 
+For this [LeetCode](https://leetcode.com/problems/two-sum/), write a two sum function. A two sum function takes in an array or list of numbers and a target value and returns the indices of two numbers if their sum is equal to the target number. 
 
 ![image](https://user-images.githubusercontent.com/66088725/132406853-0c13d47c-a99b-4ca8-afa9-229facfccd61.png)
 
