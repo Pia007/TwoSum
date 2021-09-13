@@ -23,7 +23,7 @@ For this [LeetCode](https://leetcode.com/problems/two-sum/) challenge, write a t
 The user inputs a list/array of numbers, each separated by a "space", and clicks the button to evaluate it. 
 
 NOTE: The form automatically resets 3 seconds after the numbers are evaluated.
-FILES: There are two JavaScript files. Main.js contains the function and the additionally coding neccessary to connect to the html. Two-Sum.js has the plain function.
+FILES: There are two JavaScript files. Main.js contains the function and additional coding neccessary to connect to the html. Two-Sum.js has the plain function.
 
 ![image](https://user-images.githubusercontent.com/66088725/132406853-0c13d47c-a99b-4ca8-afa9-229facfccd61.png)
 
