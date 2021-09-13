@@ -71,15 +71,18 @@ function twoSum(arr, target) {
         
         // in the object, if the value of the first number is in the object, its NOT undefined
         if (numsObj[someNum] !== undefined ) {
-            
+             //get the index of the first number from the original array and assign it
             let indexOne = numsObj[someNum];
+            // get the index of the second number and assign it
             let indexTwo = i;
             
+            // the two sums were found
             outcome.style.display = "block";
             outcome.style.color = "#00FF2A";
             outcome.innerHTML = `${target}` + " is the sum of the values at indexes ["+`${indexOne}`+", " +`${indexTwo}`+"]."
             break;
         }else { 
+            // the two sums were not found
             numsObj[numDifference] = i
             outcome.style.display = "block";
             outcome.style.color = "#FF1919";

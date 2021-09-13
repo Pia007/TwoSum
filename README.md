@@ -26,7 +26,7 @@ For this [LeetCode](https://leetcode.com/problems/two-sum/) challenge, write a t
 ### Links
 
 - Solution URL: [GitHub Repository](https://github.com/Pia007/Isogram)
-- Live Site URL: [Isogram Checker](https://pia007.github.io/Isogram/)
+- Live Site URL: [Two Sums](https://pia007.github.io/Isogram/)
 
 ## My process
 
