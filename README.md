@@ -14,7 +14,7 @@ Two Sum Function
 
 ### The Challenge
 
-[![wakatime](https://wakatime.com/badge/github/Pia007/TwoSums.svg)](https://wakatime.com/badge/github/Pia007/TwoSums)
+[![wakatime](https://wakatime.com/badge/github/Pia007/TwoSum.svg)](https://wakatime.com/badge/github/Pia007/TwoSum)
 
 Two Sum Function
 
