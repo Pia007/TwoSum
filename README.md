@@ -20,10 +20,13 @@ Two Sum Function
 
 For this [LeetCode](https://leetcode.com/problems/two-sum/) challenge, write a two sum function. A two sum function takes in an array or list of numbers and a target value and returns the indices of two numbers if their sum is equal to the target number. 
 
-The user inputs a list/array of numbers, each separated by a "space", and clicks the button to evaluate it. 
+The user inputs a list/array of numbers, each separated by a "space", and clicks the button to evaluate it. Additionally, if the input does not fit the criteria for evaluation, the user is prompted to try again. 
 
-NOTE: The form automatically resets 3 seconds after the numbers are evaluated.
-FILES: There are two JavaScript files. Main.js contains the function and additional coding neccessary to connect to the html. Two-Sum.js has the plain function.
+#### NOTE: 
+The form automatically resets 3 seconds after the numbers are evaluated.
+
+#### FILES: 
+There are two JavaScript files. Main.js contains the function and additional coding neccessary to connect to the html. Two-Sum.js has the plain function.
 
 ![image](https://user-images.githubusercontent.com/66088725/132406853-0c13d47c-a99b-4ca8-afa9-229facfccd61.png)
 

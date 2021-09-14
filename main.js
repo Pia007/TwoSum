@@ -39,16 +39,59 @@ function clearTsForm() {
 };
 
 // PREVENT THE DEFAULT BEHAVIOR OF THE BUTTON 
-// Check Two Sum Button
+// Check It Button
 buttonSum.addEventListener('click', function(e) {
     e.preventDefault();
 });
-buttonSum.addEventListener('click', twoSum);
+buttonSum.addEventListener('click', checkInput);
 
+// Check if input is only numbers
+function checkInput(arr) {
+    arr = document.getElementById("randomNumbers").value;
+    // Loop through the arr
+    for (let i = 0; i < arr.length - 1; i++){
+
+        // regex for letter and special characters or just letters or just special characters
+        let specialCases = /[A-Za-z][!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]|[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]|[A-Za-z]|[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]|[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/
+        
+        //if the array contains letters or special characters
+        if(specialCases.test(arr)) {
+
+            // if yes, user gets prompted to enter the correct data type
+            outcome.innerHTML = "Enter only numbers";
+            outcome.style.color = "#FF1919";
+            outcome.style.display = "block";
+ 
+        }else{
+            //otherwise, check if target is a number
+            checkTarget()
+        }
+        // clear the form after the function runs
+        clearTsForm()
+    }   
+}
+function checkTarget(target) {
+    target = document.getElementById("targetNumber").value;
+
+    // regex for letter and special characters or just special characters
+    let specialCases = /[A-Za-z][!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]|[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]|[A-Za-z]|[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]|[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/
+        
+    // if the target contains letters or special characters
+    if(specialCases.test(target)) {
+        outcome.innerHTML = "Enter a number";
+        outcome.style.color = "#FF1919";
+        outcome.style.display = "block";
+    } else{
+    //otherwise, call length of twoSum function
+        twoSum()
+    }
+    // clear the form after the function runs
+    clearTsForm()
+}
 
 // Two Sum function        
 function twoSum(arr, target) {
-    var twoSum = true
+    // var twoSum = true
     // get value of target 
     target = document.getElementById("targetNumber").value;
 
@@ -79,7 +122,7 @@ function twoSum(arr, target) {
             // the two sums were found
             outcome.style.display = "block";
             outcome.style.color = "#00FF2A";
-            outcome.innerHTML = `${target}` + " is the sum of the values at indexes ["+`${indexOne}`+", " +`${indexTwo}`+"]."
+            outcome.innerHTML = `${target}` + " is the sum of the values at indices ["+`${indexOne}`+", " +`${indexTwo}`+"]."
             break;
         }else { 
             // the two sums were not found
