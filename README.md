@@ -33,8 +33,8 @@ There are two JavaScript files. Main.js contains the function and additional cod
 
 ### Links
 
-- Solution URL: [GitHub Repository](https://github.com/Pia007/Isogram)
-- Live Site URL: [Two Sums](https://pia007.github.io/Isogram/)
+- Solution URL: [GitHub Repository](https://github.com/Pia007/TwoSum)
+- Live Site URL: [Two Sums](https://pia007.github.io/TwoSum/)
 
 ## My process
 
