@@ -43,10 +43,10 @@ function clearTsForm() {
 buttonSum.addEventListener('click', function(e) {
     e.preventDefault();
 });
-buttonSum.addEventListener('click', checkInput);
+buttonSum.addEventListener('click', checkTsInput);
 
 // Check if input is only numbers
-function checkInput(arr) {
+function checkTsInput(arr) {
     arr = document.getElementById("randomNumbers").value;
     // Loop through the arr
     for (let i = 0; i < arr.length - 1; i++){
