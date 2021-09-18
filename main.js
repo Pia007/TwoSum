@@ -127,9 +127,10 @@ function twoSum(arr, target) {
         }else { 
             // the two sums were not found
             numsObj[numDifference] = i
+            arr = arr.join("  ")
             outcome.style.display = "block";
             outcome.style.color = "#FF1919";
-            outcome.innerHTML = "The sum of " + `${target}` + " is not in [" +`${arr}`+ "]"
+            outcome.innerHTML = "The sum of " + `${target}` + " is not in " + `${arr}`
             
         }
         clearTsForm()
