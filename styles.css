@@ -80,7 +80,7 @@ body {
     .ts-container {
         width: 80%;
         position: relative;
-        /* overflow-y: hidden; */
+        scroll-snap-align: center;
     }
     .ts-intro,
     .sumEval {
