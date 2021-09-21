@@ -79,8 +79,9 @@ body {
 
     .ts-container {
         width: 80%;
-        position: relative;
-        scroll-snap-align: center;
+        height: 100vh;
+        /* position: relative;
+        scroll-snap-align: center; */
     }
     .ts-intro,
     .sumEval {
