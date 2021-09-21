@@ -79,9 +79,7 @@ body {
 
     .ts-container {
         width: 80%;
-        height: 100vh;
-        /* position: relative;
-        scroll-snap-align: center; */
+        margin: auto;
     }
     .ts-intro,
     .sumEval {
@@ -99,6 +97,14 @@ body {
 
 /* MAX-WIDTH 500PX */
 @media screen and (max-width: 500px) {
+    html,
+    body {
+        overflow-y: hidden;
+        width: 100%;
+    }
+    body {
+        position: relative;
+    }
     .ts-container {
         min-width: 340px;
         height: 420px;
